@@ -30,16 +30,12 @@ def main(script):
     preg = ReadFemResp(dat_file= "2002FemPreg.dat.gz")
     """
     The variable pregnum is a recode that indicates how many times each respondent has been pregnant. 
-    Print the value counts for this variable and compare them to the published results in the NSFG codebook.
-    """
+    Print the value counts for this variable and compare them to the published results in the NSFG codebook.     """
     print(f'Pregnant Value Count : {resp.pregnum.value_counts()}')
 
-    """
-    You can also cross-validate the respondent and pregnancy ﬁles by comparing pregnum for each respondent with 
-    the number of records in the pregnancy ﬁle.
-    """
+    """ You can also cross-validate the respondent and pregnancy ﬁles by comparing pregnum for each respondent with 
+    the number of records in the pregnancy ﬁle.     """
     print(ValidatePregnum(resp, preg))
-
     print('%s: All tests passed.' % script)
 
 
