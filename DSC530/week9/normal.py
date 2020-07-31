@@ -396,13 +396,6 @@ def MakeCltPlots():
 
 
 def GenerateAdultWeight(birth_weights, n):
-    """Generate a random adult weight by simulating annual gain.
-
-    birth_weights: sequence of birth weights in lbs
-    n: number of years to simulate
-
-    returns: adult weight in lbs
-    """
     bw = random.choice(birth_weights)
     factors = np.random.normal(1.09, 0.03, n)
     aw = bw * np.prod(factors)
